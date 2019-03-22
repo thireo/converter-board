@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:converterboard-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -157,22 +158,6 @@ Wire Wire Line
 Wire Wire Line
 	1325 1525 1450 1525
 $Comp
-L Connector:USB_B_Micro J1
-U 1 1 5C40CE0A
-P 1550 3850
-F 0 "J1" H 1605 4317 50  0000 C CNN
-F 1 "USB_B_Micro" H 1605 4226 50  0000 C CNN
-F 2 "Connector_USB:USB_Micro-B_Molex_47346-0001" H 1700 3800 50  0001 C CNN
-F 3 "~" H 1700 3800 50  0001 C CNN
-	1    1550 3850
-	1    0    0    -1  
-$EndComp
-Text Label 2650 3850 0    50   ~ 0
-D+
-Text Label 2650 3950 0    50   ~ 0
-D-
-NoConn ~ 1850 4050
-$Comp
 L Interface_USB:FT232RL U1
 U 1 1 5C40D14A
 P 4775 5600
@@ -188,71 +173,16 @@ D+
 Text Label 3975 5300 2    50   ~ 0
 D-
 $Comp
-L Device:Ferrite_Bead_Small L1
-U 1 1 5C40E10A
-P 2275 3650
-F 0 "L1" V 2038 3650 50  0000 C CNN
-F 1 "Ferrite_Bead_Small" V 2129 3650 50  0000 C CNN
-F 2 "Inductor_SMD:L_0603_1608Metric" V 2205 3650 50  0001 C CNN
-F 3 "~" H 2275 3650 50  0001 C CNN
-	1    2275 3650
-	0    1    1    0   
-$EndComp
-$Comp
 L Device:C_Small C1
 U 1 1 5C40E260
-P 1975 4175
-F 0 "C1" H 2067 4221 50  0000 L CNN
-F 1 "10nF" H 2067 4130 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 1975 4175 50  0001 C CNN
-F 3 "~" H 1975 4175 50  0001 C CNN
-	1    1975 4175
+P 10125 2300
+F 0 "C1" H 10217 2346 50  0000 L CNN
+F 1 "10nF" H 10217 2255 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 10125 2300 50  0001 C CNN
+F 3 "~" H 10125 2300 50  0001 C CNN
+	1    10125 2300
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2175 3650 1975 3650
-Wire Wire Line
-	1975 3650 1975 4075
-Connection ~ 1975 3650
-Wire Wire Line
-	1975 3650 1850 3650
-Wire Wire Line
-	1975 4275 1975 4350
-Wire Wire Line
-	1975 4350 1900 4350
-Wire Wire Line
-	1550 4350 1550 4250
-Wire Wire Line
-	2725 3550 2725 3650
-Wire Wire Line
-	2725 3650 2375 3650
-$Comp
-L power:VBUS #PWR04
-U 1 1 5C40F107
-P 2725 3550
-F 0 "#PWR04" H 2725 3400 50  0001 C CNN
-F 1 "VBUS" H 2740 3723 50  0000 C CNN
-F 2 "" H 2725 3550 50  0001 C CNN
-F 3 "" H 2725 3550 50  0001 C CNN
-	1    2725 3550
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR02
-U 1 1 5C40F252
-P 1900 4475
-F 0 "#PWR02" H 1900 4225 50  0001 C CNN
-F 1 "GND" H 1905 4302 50  0000 C CNN
-F 2 "" H 1900 4475 50  0001 C CNN
-F 3 "" H 1900 4475 50  0001 C CNN
-	1    1900 4475
-	1    0    0    -1  
-$EndComp
-Connection ~ 1900 4350
-Wire Wire Line
-	1900 4350 1550 4350
-Wire Wire Line
-	1900 4350 1900 4475
 $Comp
 L power:GND #PWR08
 U 1 1 5C416D3D
@@ -340,7 +270,7 @@ L Device:R_Small R2
 U 1 1 5C421A8F
 P 6000 4750
 F 0 "R2" H 6059 4796 50  0000 L CNN
-F 1 "R_Small" H 6059 4705 50  0000 L CNN
+F 1 "100" H 6059 4705 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric" H 6000 4750 50  0001 C CNN
 F 3 "~" H 6000 4750 50  0001 C CNN
 	1    6000 4750
@@ -353,7 +283,7 @@ L Device:R_Small R3
 U 1 1 5C422BC9
 P 6375 4750
 F 0 "R3" H 6434 4796 50  0000 L CNN
-F 1 "R_Small" H 6434 4705 50  0000 L CNN
+F 1 "100" H 6434 4705 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric" H 6375 4750 50  0001 C CNN
 F 3 "~" H 6375 4750 50  0001 C CNN
 	1    6375 4750
@@ -596,10 +526,6 @@ Wire Wire Line
 Wire Wire Line
 	3200 6700 3575 6700
 Connection ~ 3575 6700
-Wire Wire Line
-	1850 3950 2650 3950
-Wire Wire Line
-	1850 3850 2650 3850
 $Comp
 L power:VBUS #PWR011
 U 1 1 5C4A9852
@@ -711,11 +637,6 @@ Wire Wire Line
 	1325 6250 1075 6250
 Wire Wire Line
 	1075 6250 1075 6350
-Wire Wire Line
-	1550 4350 1450 4350
-Wire Wire Line
-	1450 4350 1450 4250
-Connection ~ 1550 4350
 Text Label 6275 1725 2    50   ~ 0
 UART_RX
 Text Label 6275 1625 2    50   ~ 0
@@ -761,4 +682,127 @@ Wire Wire Line
 	6275 1825 6200 1825
 Wire Wire Line
 	6200 1825 6200 1875
+$Comp
+L Connector:USB_C_Receptacle J4
+U 1 1 5C940DDF
+P 9100 3425
+F 0 "J4" H 9205 4992 50  0000 C CNN
+F 1 "USB_C_Receptacle" H 9205 4901 50  0000 C CNN
+F 2 "athir:DX07S024JJ" H 9250 3425 50  0001 C CNN
+F 3 "http://www.usb.org/developers/docs/usb_31_033017.zip" H 9250 3425 50  0001 C CNN
+	1    9100 3425
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0107
+U 1 1 5C940EC6
+P 9050 5150
+F 0 "#PWR0107" H 9050 4900 50  0001 C CNN
+F 1 "GND" H 9055 4977 50  0000 C CNN
+F 2 "" H 9050 5150 50  0001 C CNN
+F 3 "" H 9050 5150 50  0001 C CNN
+	1    9050 5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9050 5150 9050 5100
+Wire Wire Line
+	9050 5100 9100 5100
+Wire Wire Line
+	9100 5100 9100 5025
+Wire Wire Line
+	9200 5025 9200 5100
+Wire Wire Line
+	9200 5100 9100 5100
+Connection ~ 9100 5100
+Wire Wire Line
+	9050 5100 9000 5100
+Wire Wire Line
+	9000 5100 9000 5025
+Connection ~ 9050 5100
+Wire Wire Line
+	8900 5025 8900 5100
+Wire Wire Line
+	8900 5100 9000 5100
+Connection ~ 9000 5100
+$Comp
+L power:VBUS #PWR0108
+U 1 1 5C94D593
+P 10125 1925
+F 0 "#PWR0108" H 10125 1775 50  0001 C CNN
+F 1 "VBUS" H 10140 2098 50  0000 C CNN
+F 2 "" H 10125 1925 50  0001 C CNN
+F 3 "" H 10125 1925 50  0001 C CNN
+	1    10125 1925
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Ferrite_Bead_Small L2
+U 1 1 5C94D6D0
+P 9975 2000
+F 0 "L2" V 9738 2000 50  0000 C CNN
+F 1 "Ferrite_Bead_Small" V 9829 2000 50  0000 C CNN
+F 2 "Inductor_SMD:L_0603_1608Metric" V 9905 2000 50  0001 C CNN
+F 3 "~" H 9975 2000 50  0001 C CNN
+	1    9975 2000
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	10125 1925 10125 2000
+Wire Wire Line
+	10125 2000 10075 2000
+Wire Wire Line
+	9875 2000 9825 2000
+Wire Wire Line
+	9825 2000 9825 2125
+Wire Wire Line
+	9825 2125 9700 2125
+Wire Wire Line
+	9700 2225 9825 2225
+Wire Wire Line
+	9825 2225 9825 2125
+Connection ~ 9825 2125
+Wire Wire Line
+	9700 2325 9825 2325
+Wire Wire Line
+	9825 2325 9825 2225
+Connection ~ 9825 2225
+Wire Wire Line
+	9700 2425 9825 2425
+Wire Wire Line
+	9825 2425 9825 2325
+Connection ~ 9825 2325
+Text Label 9700 3125 0    50   ~ 0
+D+
+Text Label 9700 3225 0    50   ~ 0
+D+
+Text Label 9700 2925 0    50   ~ 0
+D-
+Text Label 9700 3025 0    50   ~ 0
+D-
+NoConn ~ 9700 2625
+NoConn ~ 9700 2725
+NoConn ~ 9700 3425
+NoConn ~ 9700 3525
+NoConn ~ 9700 3725
+NoConn ~ 9700 3825
+NoConn ~ 9700 4025
+NoConn ~ 9700 4125
+NoConn ~ 9700 4325
+NoConn ~ 9700 4425
+NoConn ~ 9700 4625
+NoConn ~ 9700 4725
+Connection ~ 10125 2000
+Wire Wire Line
+	10125 2000 10125 2200
+Wire Wire Line
+	10125 2400 10125 5100
+Wire Wire Line
+	10125 5100 9200 5100
+Connection ~ 9200 5100
+Wire Wire Line
+	8800 5025 8800 5100
+Wire Wire Line
+	8800 5100 8900 5100
+Connection ~ 8900 5100
 $EndSCHEMATC
