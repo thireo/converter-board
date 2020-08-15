@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:converterboard-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -158,7 +158,7 @@ Wire Wire Line
 Wire Wire Line
 	1325 1525 1450 1525
 $Comp
-L Interface_USB:FT232RL U1
+L converterboard-rescue:FT232RL-Interface_USB U1
 U 1 1 5C40D14A
 P 4775 5600
 F 0 "U1" H 5350 4700 50  0000 C CNN
@@ -475,9 +475,9 @@ F 3 "" H 4875 4300 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	4875 4300 4875 4400
-Text Label 5575 5000 0    50   ~ 0
-TXD
 Text Label 5575 4900 0    50   ~ 0
+TXD
+Text Label 5575 5000 0    50   ~ 0
 RXD
 NoConn ~ 5575 5300
 NoConn ~ 5575 5400
@@ -509,7 +509,7 @@ U 1 1 5C4A49FE
 P 3200 6150
 F 0 "C2" H 3292 6196 50  0000 L CNN
 F 1 "4.7uF" H 3292 6105 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm" H 3200 6150 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 3200 6150 50  0001 C CNN
 F 3 "~" H 3200 6150 50  0001 C CNN
 	1    3200 6150
 	1    0    0    -1  
@@ -683,7 +683,7 @@ Wire Wire Line
 Wire Wire Line
 	6200 1825 6200 1875
 $Comp
-L Connector:USB_C_Receptacle J4
+L converterboard-rescue:USB_C_Receptacle-Connector J4
 U 1 1 5C940DDF
 P 9100 3425
 F 0 "J4" H 9205 4992 50  0000 C CNN
